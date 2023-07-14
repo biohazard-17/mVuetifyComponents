@@ -1,7 +1,10 @@
 <template>
-  <HelloWorld />
+  <v-main>
+    <div class="text-h1">Hello from Home</div>
+  </v-main>
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+import NavBar from '@/components/NavBar.vue';
+
 </script>

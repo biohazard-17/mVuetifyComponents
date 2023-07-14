@@ -1,6 +1,6 @@
 <template>
     <v-card >
-        <v-app-bar color="bg1" style="overflow: visible;" >
+        <v-app-bar color="background" style="overflow: visible;" >
             <v-app-bar-nav-icon :ripple="false" class="hidden-sm-and-up" icon="mdi-dots-vertical" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title color="accent" style="font-size: 1.5em;">BIOHAZARD_17</v-toolbar-title>
             <v-spacer></v-spacer>
