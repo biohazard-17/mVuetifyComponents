@@ -11,8 +11,8 @@
             <span v-for="link in links" :key="link.target" :class="{ active: link.trigger }"
                 v-on:mouseenter="link.trigger = !link.trigger" v-on:mouseleave="link.trigger = !link.trigger"
                 :style=link.style class="justify-center align-center d-flex my-2 list">
-                <v-btn @click="scroll(link.target)" class="icon " :icon=link.icon :color="link.trigger ? link.clr : 'black'"
-                    variant="text">
+                <v-btn @click="scroll(link.target)" class="icon " :icon=link.icon :color="link.trigger ? 'black' : link.clr"
+                    variant="text" :style="link.style">
                 </v-btn>
                 <v-tooltip offset="40" activator="parent" location="end">{{ link.text }}</v-tooltip>
                 
@@ -45,6 +45,7 @@ function scroll(refName) {
 
 .list.active .icon {
     transform: translateX(32px);
+    background: var(--clr) !important;
     transition: 0.5s;
 }
 .icon{
@@ -55,37 +56,6 @@ function scroll(refName) {
     position: fixed;
     height: 100%;
     overflow: visible;
-}
-
-.menuBtn {
-    width: 64px;
-    height: 64px;
-    border-bottom: 1px solid black;
-}
-
-.line1,
-.line2,
-.line3 {
-    width: 24px;
-    height: 2px;
-    background: black;
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
-.menuBtn.drawer .line1 {
-    transform: translateY(8px) rotate(45deg);
-    transition: 0.4s;
-}
-
-.menuBtn.drawer .line2 {
-    opacity: 0;
-    transition: 0.4s;
-}
-
-.menuBtn.drawer .line3 {
-    transform: translateY(-8px) rotate(-45deg);
-    transition: 0.4s;
 }
 
 .indicator {

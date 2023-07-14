@@ -1,0 +1,41 @@
+.start .MMLabel {
+    transform: translateX(-20px);
+}
+.start .list_item.active .MMLabel {
+    transform: translateX(96px);
+}
+.start .active.list_item .icon {
+    transform: translateX(32px);
+}
+/*indicator*/
+.start .indicator::before {
+    top: -22px;
+    box-shadow: -11px 9px var(--clr);
+    left: 32px;
+}
+.start .indicator::after {
+    bottom: -22px;
+    box-shadow: -11px -9px var(--clr);
+    left: 32px;
+}
+/*indicator displacement*/
+.start .list_item:nth-child(2).active~.indicator {
+    transform: translateY(calc(64px * 0)) translateX(32px);
+    transition: 0.5s;
+}
+.start .list_item:nth-child(3).active~.indicator {
+    transform: translateY(calc(64px * 1)) translateX(32px);
+    transition: 0.5s;
+}
+.start .list_item:nth-child(4).active~.indicator {
+    transform: translateY(calc(64px * 2)) translateX(32px);
+    transition: 0.5s;
+}
+.start .list_item:nth-child(5).active~.indicator {
+    transform: translateY(calc(64px * 3)) translateX(32px);
+    transition: 0.5s;
+}
+.start .list_item:nth-child(6).active~.indicator {
+    transform: translateY(calc(64px * 4)) translateX(32px);
+    transition: 0.5s;
+}

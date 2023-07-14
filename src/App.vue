@@ -1,7 +1,6 @@
 <template>
-  <v-app dark1>
+  <v-app theme="dark1">
     <NavBar></NavBar>
-    <v-main></v-main>
   </v-app>
 </template>
 

@@ -17,7 +17,7 @@
                 <v-tooltip offset="40" activator="parent" location="end">{{ link.text }}</v-tooltip>
                 
             </span>
-            <div class="indicator bg-primary" style="--clr:#263238"></div>
+            <div class="indicator bg-primary2" style="--clr:#37474f"></div>
 
         </div>
 
@@ -57,46 +57,16 @@ function scroll(refName) {
     overflow: visible;
 }
 
-.menuBtn {
-    width: 64px;
-    height: 64px;
-    border-bottom: 1px solid black;
-}
-
-.line1,
-.line2,
-.line3 {
-    width: 24px;
-    height: 2px;
-    background: black;
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
-.menuBtn.drawer .line1 {
-    transform: translateY(8px) rotate(45deg);
-    transition: 0.4s;
-}
-
-.menuBtn.drawer .line2 {
-    opacity: 0;
-    transition: 0.4s;
-}
-
-.menuBtn.drawer .line3 {
-    transform: translateY(-8px) rotate(-45deg);
-    transition: 0.4s;
-}
-
 .indicator {
     position: absolute;
     width: 64px;
     height: 64px;
     top: 16px;
-    left: 0;
+    left: 32px;
     border-radius: 50%;
     transition: 0.5s;
     z-index: -1000;
+    opacity: 0;
 }
 .indicator::after,
 .indicator::before{
@@ -106,42 +76,42 @@ function scroll(refName) {
     height: 24px;
     background: transparent;
     border-radius: 50%;
-    left: 32px;
+    left: 8px;
 }
 .indicator::after{
     top: -22px;
-    box-shadow: -11px 10px var(--clr);
+    box-shadow: 11px 10px var(--clr);
     z-index: -1000;
 }
 .indicator::before{
     bottom: -22px;
-    box-shadow: -11px -10px var(--clr);
+    box-shadow: 11px -10px var(--clr);
     z-index: -1000;
 }
 .list:nth-child(1).active~.indicator {
     transform: translateY(calc(64px * 0));
     transition: 0.5s;
-    left: 32px; 
+    opacity: 1;
 }
 .list:nth-child(2).active~.indicator {
     transform: translateY(calc(64px * 1));
     transition: 0.5s;
-    left: 32px; 
+    opacity: 1;
 }
 .list:nth-child(3).active~.indicator {
     transform: translateY(calc(64px * 2));
     transition: 0.5s;
-    left: 32px; 
+    opacity: 1; 
 }
 .list:nth-child(4).active~.indicator {
     transform: translateY(calc(64px * 3));
     transition: 0.5s;
-    left: 32px; 
+    opacity: 1;
 }
 .list:nth-child(5).active~.indicator {
     transform: translateY(calc(64px * 4));
     transition: 0.5s;
-    left: 32px; 
+    opacity: 1;
 }
 
 

@@ -11,15 +11,16 @@ import 'vuetify/styles'
 
 // Composables
 import { createVuetify } from 'vuetify'
-import {cDarkTheme} from '../themes'
+import {cDarkTheme, cLightTheme} from '../themes'
 const cDark = cDarkTheme();
+const cLight = cLightTheme();
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 
 export default createVuetify({
   theme: {
-    defaultTheme: 'dark1',
     themes: {
       dark1:cDark,
+      light1: cLight,
     },
   },
 
