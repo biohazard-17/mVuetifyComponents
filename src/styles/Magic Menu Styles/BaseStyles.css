@@ -1,0 +1,108 @@
+/*wrapper side variations*/
+
+.top.mWrapper, .bottom.mWrapper {
+    display: flex;
+    height: 64px; 
+    overflow: visible;
+}
+.start.mWrapper, .end.mWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 64px !important;
+    overflow: visible;
+    
+}
+.top.mWrapper .list_item, .bottom.mWrapper .list_item{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.start.mWrapper .list_item, .end.mWrapper .list_item{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+/*label*/
+.MMLabel {
+    position: absolute;
+    font-size: 0.3em;
+    letter-spacing: 1px;
+    opacity: 0;
+    word-wrap: normal;
+}
+.list_item.active .MMLabel {
+    font-size: 0.7em;
+    opacity: 1;
+    color: black !important;
+    transition: 0.6s;
+    border-radius: 10px;
+    background: var(--clr);
+}
+.typeD.top .active.list_item, .typeD.bottom .active.list_item{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.typeD.start .active.list_item, .typeD.end .active.list_item{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+/*menu item*/
+.list_item {
+    width: 64px !important;
+    height: 64px !important;
+    background: transparent;
+    z-index: 1000 !important;
+    transition: 0.5s;
+}
+
+.icon {
+    font-size: 1.2em;
+    font-weight: 300;
+    background: transparent !important;
+}
+.active.list_item .icon.normal {
+    background: transparent !important;
+    transition: 0.6s;
+}
+.active.list_item .icon.colorized {
+    background: var(--clr) !important;
+    transition: 0.6s;
+    color: black !important;
+}
+.indicator {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s;
+    opacity: 0;
+    background: var(--bg-clr);
+}
+.indicator::before,
+.indicator::after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    opacity: 0;
+}
+.mWrapper:not(.typeC) .indicator::before,
+.mWrapper:not(.typeC) .indicator::after{
+    width: 24px;
+    height: 24px;
+}
+.mWrapper.typeC .indicator::before,
+.mWrapper.typeC .indicator::after{
+    width: 32px;
+    height: 32px;
+}
+.list_item.active~.indicator{
+    opacity: 1;
+}
+.list_item.active~.indicator::after, .list_item.active~.indicator::before{
+    opacity: 1;
+    transition: 1s;
+}
+.hide{
+    display: none !important;
+}

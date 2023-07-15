@@ -1,0 +1,96 @@
+.typeC.start .MMLabel {
+    transform: translateX(56px);
+}
+.typeC.start.mWrapper{
+    transform: translateX(8px);
+}
+.start .list_item.active .MMLabel {
+    transform: translateX(96px);
+}
+.start:not(.typeC) .active.list_item .icon {
+    transform: translateX(32px);
+}
+/*indicator*/
+.typeA.start .indicator::before {
+    top: -21px;
+    box-shadow: -12px 12px var(--bg-clr);
+    left: 31px;
+}
+.typeA.start .indicator::after {
+    bottom: -21px;
+    box-shadow: -12px -12px var(--bg-clr);
+    left: 31px;
+}
+.typeB.start .indicator::before {
+    top: -21px;
+    box-shadow: 12px 12px var(--bg-clr);
+    left: 9px;
+}
+.typeB.start .indicator::after {
+    bottom: -21px;
+    box-shadow: 12px -12px var(--bg-clr);
+    left: 9px;
+}
+.typeC.start .indicator::after {
+    left: 25px;
+    box-shadow: 16px 16px var(--bg-clr);
+    top: -32px;
+}
+.typeC.start .indicator::before {
+    left: 25px;
+    box-shadow: 16px -16px var(--bg-clr);
+    bottom: -32px;
+}
+
+/*indicator displacement*/
+.start.typeA .list_item.active~.indicator,
+.start.typeB .list_item.active~.indicator {
+    opacity: 1;
+}
+.start:not(.typeC) .list_item:nth-child(2).active~.indicator {
+    transform: translateY(calc(64px * 0)) translateX(32px);
+    transition: 0.5s;
+}
+.start:not(.typeC) .list_item:nth-child(3).active~.indicator {
+    transform: translateY(calc(64px * 1)) translateX(32px);
+    transition: 0.5s;
+}
+.start:not(.typeC) .list_item:nth-child(4).active~.indicator {
+    transform: translateY(calc(64px * 2)) translateX(32px);
+    transition: 0.5s;
+}
+.start:not(.typeC) .list_item:nth-child(5).active~.indicator {
+    transform: translateY(calc(64px * 3)) translateX(32px);
+    transition: 0.5s;
+}
+.start:not(.typeC) .list_item:nth-child(6).active~.indicator {
+    transform: translateY(calc(64px * 4)) translateX(32px);
+    transition: 0.5s;
+}
+
+
+/*type C*/
+.start.typeC .list_item:nth-child(2).active~.indicator {
+    transform: translateY(calc(64px*0));
+    transition: 0.5s;
+}
+
+.start.typeC .list_item:nth-child(3).active~.indicator {
+    transform: translateY(calc(64px*1));
+    transition: 0.5s;
+}
+
+.start.typeC .list_item:nth-child(4).active~.indicator {
+    transform: translateY(calc(64px*2));
+    transition: 0.5s;
+}
+
+.start.typeC .list_item:nth-child(5).active~.indicator {
+    transform: translateY(calc(64px*3));
+    transition: 0.5s;
+}
+
+.start.typeC .list_item:nth-child(6).active~.indicator {
+    transform: translateY(calc(64px*4));
+    transition: 0.5s;
+}

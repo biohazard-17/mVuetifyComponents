@@ -1,0 +1,110 @@
+.bottom:not(.typeC) .MMLabel {
+    transform: translateY(20px);
+}
+
+.bottom:not(.typeC) .list_item.active .MMLabel {
+    transform: translateY(12px);
+}
+
+.bottom:not(.typeC) .active.list_item .icon {
+    transform: translateY(-32px);
+}
+
+.typeC.bottom .MMLabel {
+    transform: translateY(-48px);
+}
+
+.typeC.bottom.mWrapper {
+    transform: translateY(-8px);
+}
+/*indicator*/
+
+.typeA.bottom .indicator::before {
+    left: -22px;
+    box-shadow: 9px 11px var(--bg-clr);
+    bottom: 32px;
+}
+
+.typeB.bottom .indicator::before {
+    left: -22px;
+    box-shadow: 9px -11px var(--bg-clr);
+    bottom: 9px;
+}
+
+.typeA.bottom .indicator::after {
+    right: -22px;
+    box-shadow: -9px 11px var(--bg-clr);
+    bottom: 32px;
+}
+
+.typeB.bottom .indicator::after {
+    right: -22px;
+    box-shadow: -9px -11px var(--bg-clr);
+    bottom: 9px;
+}
+.typeC.bottom .indicator::after {
+    left: -31px;
+    box-shadow: 16px -16px var(--bg-clr);
+    bottom: 25px;
+}
+.typeC.bottom .indicator::before {
+    right: -31px;
+    box-shadow: -16px -16px var(--bg-clr);
+    bottom: 25px;
+}
+/*indicator displacement*/
+.bottom.typeA .list_item.active~.indicator,
+.bottom.typeB .list_item.active~.indicator {
+    opacity: 1;
+}
+
+.bottom:not(.typeC) .list_item:nth-child(2).active~.indicator {
+    transform: translateX(calc(64px * 0)) translateY(-32px);
+    transition: 0.5s;
+}
+
+.bottom:not(.typeC) .list_item:nth-child(3).active~.indicator {
+    transform: translateX(calc(64px * 1)) translateY(-32px);
+    transition: 0.5s;
+}
+
+.bottom:not(.typeC) .list_item:nth-child(4).active~.indicator {
+    transform: translateX(calc(64px * 2)) translateY(-32px);
+    transition: 0.5s;
+}
+
+.bottom:not(.typeC) .list_item:nth-child(5).active~.indicator {
+    transform: translateX(calc(64px * 3)) translateY(-32px);
+    transition: 0.5s;
+}
+
+.bottom:not(.typeC) .list_item:nth-child(6).active~.indicator {
+    transform: translateX(calc(64px * 4)) translateY(-32px);
+    transition: 0.5s;
+}
+
+/*type C indicator movement*/
+.bottom.typeC .list_item:nth-child(2).active~.indicator {
+    transform: translateX(calc(64px*0));
+    transition: 0.5s;
+}
+
+.bottom.typeC .list_item:nth-child(3).active~.indicator {
+    transform: translateX(calc(64px*1));
+    transition: 0.5s;
+}
+
+.bottom.typeC .list_item:nth-child(4).active~.indicator {
+    transform: translateX(calc(64px*2));
+    transition: 0.5s;
+}
+
+.bottom.typeC .list_item:nth-child(5).active~.indicator {
+    transform: translateX(calc(64px*3));
+    transition: 0.5s;
+}
+
+.bottom.typeC .list_item:nth-child(6).active~.indicator {
+    transform: translateX(calc(64px*4));
+    transition: 0.5s;
+}
